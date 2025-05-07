@@ -27,7 +27,7 @@ public class UserService {
                 .orElseThrow(() -> new UserNotFoundException(id));
     }
 
-    public User uodateUser(Long id, UserRequest request) {
+    public User updateUser(Long id, UserRequest request) {
         User user = getUserById(id);
         user.setName(request.getName());
         user.setEmail(request.getEmail());
